@@ -1,7 +1,7 @@
-TypeScript React "material-ui" Demo
+TypeScript React "material-ui" Grid Button to Right Demo
 ===================================
 
-如何使用TypeScript来写"material-ui"
+在一行中，利用`Grid`，让button缩在最右边
 
 ```
 npm install

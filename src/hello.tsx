@@ -1,33 +1,17 @@
-import React, {useState} from 'react'
+import Grid from '@material-ui/core/Grid';
+import React from 'react';
 
-import {List, ListItem, ListItemText, ListItemIcon, Collapse} from '@material-ui/core'
-import InboxIcon from '@material-ui/icons/Inbox'
-import {ExpandMore, ExpandLess} from '@material-ui/icons'
-
-export default function MyList() {
-  const [open, setOpen] = useState(false)
-
-  return <div>
-    <List>
-      <ListItem button onClick={() => setOpen(!open)}>
-        <ListItemIcon>
-          <InboxIcon/>
-        </ListItemIcon>
-        <ListItemText primary='Hello'/>
-        {
-          open ? <ExpandLess/> : <ExpandMore/>
-        }
-      </ListItem>
-      <Collapse in={open}>
-        <List>
-          <ListItem>
-            <ListItemText primary='typescript'/>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary='material-ui'/>
-          </ListItem>
-        </List>
-      </Collapse>
-    </List>
-  </div>
+export default function ComplexGrid() {
+  return (
+    <div style={{width: 400, backgroundColor: '#EEEEEE'}}>
+      <Grid container>
+        <Grid item xs>
+          Title
+        </Grid>
+        <Grid item>
+          X
+        </Grid>
+      </Grid>
+    </div>
+  );
 }
